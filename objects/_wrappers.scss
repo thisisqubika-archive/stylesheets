@@ -1,0 +1,17 @@
+.o-wrapper {
+    display: block;
+    position: relative;
+    padding-right: $base-spacing-unit;
+    padding-left:  $base-spacing-unit;
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: 320px;
+
+    @include media-query(start) {
+        max-width: 600px;
+    }
+
+    @include media-query(small) {
+        max-width: 1000px;
+    }
+}

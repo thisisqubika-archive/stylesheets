@@ -1,0 +1,94 @@
+.o-box {
+  text-align: center;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.o-box--small{
+  padding: $base-spacing-unit;
+}
+
+.o-box__stuff {
+  display: table-cell;
+  vertical-align: middle;
+  padding: $base-spacing-unit;
+  position: relative;
+  font-size: 1em;
+
+  @include media-query(large) {
+    padding-left: $base-spacing-unit * 2;
+    padding-right: $base-spacing-unit * 2;
+  }
+
+  &--white {
+    background-color: white;
+  }
+
+  &--bottom {
+    vertical-align: bottom;
+  }
+
+  &--text-left {
+    text-align: left;
+  }
+}
+
+
+$proportions-list: (
+  w1h1: (1 / 1) * 100%,
+  w2h1: (1 / 2) * 100%,
+  w1h2: (2 / 1) * 100%,
+  w2h5: (5 / 2) * 100%,
+  w4h3: (3 / 4) * 100%,
+  w2h3: (3 / 2) * 100%,
+  w3h1: (1 / 3) * 100%,
+  w3h2: (2 / 3) * 100%,
+  w3h4: (4 / 3) * 100%,
+  w9h4: (4 / 9) * 100%,
+  w16h9: (9 / 16) * 100%,
+  auto: 0
+
+);
+
+
+@mixin box-ratio($grid-breakpoint: null) {
+    @each $i, $padding in $proportions-list {
+        .o-box--#{$i}#{$grid-breakpoint} {
+            padding-bottom: $padding;
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    }
+}
+
+
+  @include box-ratio;
+
+  @include media-query(start) {
+    @include box-ratio(-st);
+  }
+
+  @include media-query(small) {
+    @include box-ratio(-sm);
+  }
+
+  @include media-query(large) {
+    @include box-ratio(-lg);
+  }
+
+  %o-box__stuff--fixed {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+  }
+
+  @each $i, $padding in $proportions-list {
+    [class*='o-box--#{$i}'] > .o-box__stuff {
+      @extend %o-box__stuff--fixed;
+    }
+  }

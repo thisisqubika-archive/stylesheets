@@ -1,0 +1,19 @@
+{
+  "name": "pygments",
+  "version": "2.0.2",
+  "description": "Bower package for Pygments",
+  "main": [
+    "css/"
+  ],
+  "homepage": "https://github.com/xavierdutreilh/bower-pygments",
+  "_release": "2.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.2",
+    "commit": "59d06c8e6a20855abd0665fb5901a41f7302be90"
+  },
+  "_source": "git://github.com/xavierdutreilh/bower-pygments.git",
+  "_target": "^2.0.2",
+  "_originalSource": "pygments",
+  "_direct": true
+}

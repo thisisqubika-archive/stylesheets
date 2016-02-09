@@ -1,0 +1,50 @@
+$base-font-size:              16px;
+$inuit-base-font-size:        $base-font-size;
+
+$base-line-height:            20px;
+$inuit-base-line-height:      $base-line-height;
+
+$base-radius:                 999999px;
+
+$base-transition:             0.333333333s;
+
+$base-spacing-unit:           20px;
+
+$inuit-base-spacing-unit:     $base-spacing-unit;
+
+$logo-height:                 $base-spacing-unit * 2;
+
+$go-down-space:               $base-spacing-unit * 3;
+
+$icon-height:                 $base-spacing-unit * 4;
+
+$inuit-responsive-settings:   true;
+
+$inuit-layout-namespace:      'o-' ;
+
+//
+$inuit-use-fractions:         false;
+$inuit-widths-delimiter:      of;
+
+
+
+$breakpoints: (
+    "start"          "screen and (min-width: 450px)",
+    "small"          "screen and (min-width: 873px)",
+    "large"          "screen and (min-width: 1200px)",
+    "retina"         "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+);
+
+//
+
+$inuit-heading-size-1:  36px;
+$inuit-heading-size-2:  30px;
+$inuit-heading-size-3:  24px;
+$inuit-heading-size-4:  20px;
+$inuit-heading-size-5:  16px;
+$inuit-heading-size-6:  14px;
+
+//
+
+$inuit-widths-columns: (1,2,3,4,5,6,7,8,12);
+$inuit-widths-columns-responsive: $inuit-widths-columns;

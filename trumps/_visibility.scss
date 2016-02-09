@@ -1,0 +1,106 @@
+/*------------------------------------*\
+    #BREAKPOINT VISIBILITY
+\*------------------------------------*/
+
+/**
+ * Hide when screen is < 400px
+ */
+
+.u-mobile-only {
+  @include media-query(start) {
+    display: none !important;
+  }
+}
+
+/**
+ * Hide when screen is < 400px
+ */
+
+.u-hide-mobile {
+  @media screen and (max-width: 400px) {
+    display: none !important;
+  }
+}
+
+/**
+ * Visible only on start screens > 400px and < 800px
+ */
+
+.u-start-only {
+  display: none !important;
+
+  @include media-query(start) {
+    display: block !important;
+  }
+
+  @include media-query(small) {
+    display: none !important;
+  }
+}
+
+/**
+ * Visible only on screens > 400px
+ */
+
+.u-start-up {
+  display: none !important;
+
+  @include media-query(start) {
+    display: block !important;
+  }
+}
+
+/**
+ * Visible only on screens < 800px
+ */
+
+.u-hide-small {
+  display: block !important;
+
+  @include media-query(small) {
+    display: none !important;
+  }
+}
+
+/**
+ * Visible only on screens > 800px
+ */
+
+.u-small-up {
+  display: none !important;
+
+  @include media-query(small) {
+    display: block !important;
+  }
+}
+
+/**
+ * Visible only screens > 1250px
+ */
+
+.u-large-up {
+  display: none !important;
+
+  @include media-query(large) {
+    display: block !important;
+  }
+}
+
+.u-hide-always,
+[name='google_conversion_frame'] {
+  display: none !important;
+}
+
+
+.u-show-on-hover{
+
+  @include media-query(small) {
+    opacity: 0;
+    transition: opacity .2s ease;
+
+    &:hover{
+      opacity: 1;
+      cursor: hover;
+    }
+  }
+}
