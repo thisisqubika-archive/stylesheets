@@ -21,11 +21,14 @@ $icon-height:                 $base-spacing-unit * 4;
 $inuit-responsive-settings:   true;
 
 $inuit-layout-namespace:      'o-' ;
+$inuit-enable-layout--flush:   true;
 
 //
 $inuit-use-fractions:         false;
-$inuit-widths-delimiter:      of;
 
+$wraper-width-default: 320px;
+$wraper-width-start:   600px;
+$wraper-width-small:   800px;
 
 
 $breakpoints: (
@@ -37,12 +40,12 @@ $breakpoints: (
 
 //
 
-$inuit-heading-size-1:  36px;
-$inuit-heading-size-2:  30px;
-$inuit-heading-size-3:  24px;
-$inuit-heading-size-4:  20px;
-$inuit-heading-size-5:  16px;
-$inuit-heading-size-6:  14px;
+$inuit-heading-size-6:  18px;
+$inuit-heading-size-5:  $inuit-heading-size-6 * 1.2555;
+$inuit-heading-size-4:  $inuit-heading-size-5 * 1.2555;
+$inuit-heading-size-3:  $inuit-heading-size-4 * 1.2555;
+$inuit-heading-size-2:  $inuit-heading-size-3 * 1.2555;
+$inuit-heading-size-1:  $inuit-heading-size-2 * 1.2555;
 
 //
 

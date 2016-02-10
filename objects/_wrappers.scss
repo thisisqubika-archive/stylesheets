@@ -5,13 +5,13 @@
     padding-left:  $base-spacing-unit;
     margin-right: auto;
     margin-left:  auto;
-    max-width: 320px;
+    max-width: $wraper-width-default;
 
     @include media-query(start) {
-        max-width: 600px;
+        max-width: $wraper-width-start;
     }
 
     @include media-query(small) {
-        max-width: 1000px;
+        max-width: $wraper-width-small;
     }
 }
