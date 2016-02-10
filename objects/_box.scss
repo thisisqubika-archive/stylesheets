@@ -36,17 +36,16 @@
 
 
 $proportions-list: (
-  '1:1': (1 / 1) * 100%,
-  '2:1': (1 / 2) * 100%,
-  '1:2': (2 / 1) * 100%,
-  '2:5': (5 / 2) * 100%,
-  '4:3': (3 / 4) * 100%,
-  '2:3': (3 / 2) * 100%,
-  '3:1': (1 / 3) * 100%,
-  '3:2': (2 / 3) * 100%,
-  '3:4': (4 / 3) * 100%,
-  '9:4': (4 / 9) * 100%,
-  '16:9': (9 / 16) * 100%,
+  '1x1': percentage(1 / 1),
+  '2x1': percentage(1 / 2),
+  '1x2': percentage(2 / 1),
+  '4x3': percentage(3 / 4),
+  '2x3': percentage(3 / 2),
+  '3x1': percentage(1 / 3),
+  '3x2': percentage(2 / 3),
+  '3x4': percentage(4 / 3),
+  '9x4': percentage(4 / 9),
+  '16x9': percentage(9 / 16),
   auto: 0
 
 );
@@ -68,15 +67,15 @@ $proportions-list: (
   @include box-ratio;
 
   @include media-query(start) {
-    @include box-ratio(-st);
+    @include box-ratio(-start);
   }
 
   @include media-query(small) {
-    @include box-ratio(-sm);
+    @include box-ratio(-small);
   }
 
   @include media-query(large) {
-    @include box-ratio(-lg);
+    @include box-ratio(-large);
   }
 
   %o-box__stuff--fixed {
