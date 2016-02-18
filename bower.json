@@ -1,5 +1,5 @@
 {
-  "name": "mooveit-web-styles",
+  "name": "mooveit-stylesheets",
   "version": "0.0.1",
   "authors": [
     "Moove-it Team"
@@ -44,5 +44,5 @@
     "inuit-widths-responsive": "^0.2.2"
   },
   "moduleType": [],
-  "homepage": "https://github.com/guzmaniglesias/mooveit-styles"
+  "homepage": "https://github.com/guzmaniglesias/mooveit-stylesheets"
 }
