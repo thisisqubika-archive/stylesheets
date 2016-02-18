@@ -1,551 +1,155 @@
-//Floats
+//
+// Massive utility generator
+// ==========================================================================
 
-.u-float-left {
-  float: left !important;
-}
+//
+// Following list defines which properties will be available for using by the utility (.u-) namespace.
+// Frist value works a a configuration value in order to set responsive behavior.
+//
 
-.u-float-right {
-  float: right !important;
-  &-sm{
-    @include media-query(small) {
-      float: right !important;
+$utilities: (
+  'float':                    responsive_false     left right,
+  'clear':                    responsive_false     left right both,
+  'text-align':               responsive_false     center left right,
+  'text-decoration':          responsive_false     line-through none,
+  'font-weight':              responsive_false     300 800 400,
+  'list-style':               responsive_false     none,
+  'margin-left':              responsive_false     auto,
+  'margin-right':             responsive_false     auto,
+  'position':                 responsive_false     absolute relative fixed,
+  'overflow':                 responsive_false     hidden,
+  'display':                  responsive_false     block inline-block inline none table table-cell responsive,
+);
+
+@each $i, $property in $utilities {
+
+  //
+  // @for statement starts with 2 in order to get ride of first value
+  // that is a responsive behaviour setting but not a valid declaration value.
+  //
+
+  @for $n from 2 through length($property) {
+    @if nth($property, 1) == responsive_false {
+      .u-#{$i}--#{nth($property, $n)} {
+        #{$i}: nth($property, $n);
+      }
     }
-  }
-}
-
-.u-float-none {
-  float: none !important;
-}
-
-// Clear
-
-.u-clear {
-  clear: both;
-}
-
-.u-clear-left {
-  clear: left;
-}
-
-// Heights
-
-.u-full-height {
-    height: 100% !important;
-}
-
-.u-half-height {
-  height: 50% !important;
-}
-
-// Box shadow
-
-.u-box-shadow {
-  box-shadow:  0px 0px 50px black;
-}
-
-//Separation
-
-.u-separation {
-  @include clearfix;
-  height: $base-spacing-unit ;
-
-  &--x2 {
-    height: $base-spacing-unit * 2;
-  }
-
-  &--x4 {
-    height: $base-spacing-unit * 4;
-  }
-
-  &--x8 {
-    height: $base-spacing-unit * 8;
-  }
-}
-
-// Text aligns
-
-.u-text-center {
-  text-align: center;
-}
-
-.u-text-left {
-  text-align: left;
-}
-
-.u-text-right{
-  text-align: right;
-}
-
-.u-text-right-sm {
-  @include media-query(small) {
-    text-align: right
-  }
-}
-
-.u-text-left-sm {
-  @include media-query(small) {
-    text-align: left
-  }
-}
-
-
-.u-text-overline {
-  text-decoration: line-through;
-}
-
-.u-text-center-for-small {
-  text-align: left;
-  @include media-query(small) {
-    text-align: center;
-  }
-}
-
-.u-text-size {
-  font-size: $base-spacing-unit;
-
-  &-x2 {
-    font-size: $base-spacing-unit * 2;
-  }
-
-}
-
-
-// Font Weights
-
-.u-font-light {
-  font-weight: 300 !important;
-}
-
-.u-font-bold {
-  font-weight: bold !important;
-}
-
-.u-font-normal {
-  font-weight: normal !important;
-}
-
-// Line Height
-
-.u-base-line-height {
-  line-height: 1.25 !important;
-}
-
-.u-line-height-double {
-  line-height: 2 !important;
-}
-
-.u-line-height-40 {
-  line-height: 40px !important;
-}
-
-.u-line-height-50 {
-  line-height: 50px !important;
-  &-sm{
-    @include media-query(small) {
-      line-height: 50px !important;
-    }
-  }
-}
-
-
-// Lists
-.u-list-unstyle {
-  list-style: none;
-}
-
-// Text decorations
-.u-no-decoration, .u-no-decoration:hover {
-  text-decoration: none !important;
-}
-
-// Text colors
-
-.u-text-white {
-  color: white !important;
-  &--small {
-    @include media-query(small) {
-      color: white !important;
-    }
-  }
-}
-
-.u-text-black {
-  color: black;
-}
-
-.u-text-orange {
-  color: $color-brand-primary;
-}
-
-.u-text-grey{
-  color: $color-grey;
-}
-
-.u-text-dark {
-  color: $color-grey-darker;
-}
-
-
-.u-text-orange-hover:hover {
-  color: $color-brand-primary;
-}
-
-.u-text-white-hover:hover {
-  color: white;
-  cursor: pointer;
-  transition: $base-transition;
-}
-
-// Background colors
-.u-background-grey {
-  background-color: $color-grey;
-}
-
-.u-background-grey-light {
-  background-color: $color-grey-light;
-}
-
-.u-background-grey-lighter {
-  background-color: $color-grey-lighter;
-}
-
-.u-background-dark {
-  background-color: $color-grey-dark;
-}
-
-.u-background-white {
-  background-color: white;
-}
-
-.u-background-darker {
-  background-color: $color-grey-darker;
-}
-.u-background-darker-hover:hover {
-  background-color: $color-grey-darkest;
-  transition: $base-transition;
-}
-
-.u-background-darkest {
-  background-color: $color-grey-darkest;
-}
-
-
-.u-background-brand,
-.u-background-orange {
-  background-color: $color-brand-primary;
-}
-
-.u-background-transparent {
-  background-color: transparent;
-}
-
-.u-background-layer {
-  background-color: rgba(black, .75);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.u-gradient-background {
-  background-image: linear-gradient( to top , rgba($color-grey-darker, 1), rgba($color-grey-darker, 0) );
-}
-
-.u-gradient-background--alt {
-  background-image: linear-gradient( to top , rgba($color-grey-darker, 0), rgba($color-grey-darker, .25) );
-}
-
-.u-gradient-shadow {
-  background-image: linear-gradient( to top , rgba($color-grey-darker, 0), rgba($color-grey-darker, 0) calc(100% - #{$base-spacing-unit}),rgba($color-grey-darker, .25) );
-}
-
-.u-background-grey-hover:hover {
-  background-color: $color-grey;
-  cursor: pointer;
-  transition: $base-transition;
-}
-
-// Fills
-
-.u-fill-grey  {
-  &, & * {
-    fill: $color-grey !important;
-  }
-}
-
-.u-fill-grey-light {
-  &, & * {
-    fill: $color-grey-light !important;
-  }
-}
-
-.u-fill-grey-lighter {
-  &, & * {
-    fill: $color-grey-lighter !important;
-  }
-}
-
-.u-fill-dark {
-  &, & * {
-    fill: $color-grey-dark !important;
-  }
-}
-
-.u-fill-white {
-  &, & * {
-    fill: white !important;
-  }
-  &-sm {
-    @include media-query(small) {
-      fill: white !important;
-    }
-  }
-}
-
-.u-fill-darker {
-  &, & * {
-    fill: $color-grey-darker !important;
-  }
-}
-
-.u-fill-darkest {
-  &, & * {
-    fill: $color-grey-darkest !important;
-  }
-}
-
-.u-fill-brand ,
-.u-fill-orange {
-  &, & * {
-    fill: $color-brand-primary !important;
-  }
-  &-sm {
-    &, & * {
-      @include media-query(small) {
-        fill: $color-brand-primary !important;
+    @else {
+      .u-#{$i}--#{nth($property, $n)} {
+        @include media-query(start) {
+          &-start {
+            #{$i}: nth($property, $n);
+          }
+        }
+        @include media-query(small) {
+          &-small {
+            #{$i}: nth($property, $n);
+          }
+        }
       }
     }
   }
 }
 
-.u-fill-orange-hover:hover {
-  &, & * {
-    fill: $color-brand-primary !important;
-    cursor: pointer;
+
+
+
+/*
+    Max widths
+   ========================================================================== */
+
+$max-widths: 72 200 400 500 600 800 1024;
+
+@each $mw in $max-widths {
+
+  .u-max-width--#{$mw} {
+
+    max-width: 1px * $mw;
+
+    @include media-query(start) {
+      &-start {
+        max-width: 1px * $mw;
+      }
+    }
+    @include media-query(small) {
+      &-small {
+        max-width: 1px * $mw;
+      }
+    }
+  }
+}
+
+
+
+
+
+/*
+    Heights
+   ========================================================================== */
+
+$heights: 100 75 50 ;
+
+@each $h in $heights {
+  .u-height--#{$h} {
+    height: 1% * $h !important;
+  }
+}
+
+
+
+
+
+/*
+    Body and background colors
+   ========================================================================== */
+
+$our-colors: (
+  white: white,
+  black: black,
+
+  orange: $color-brand-primary,
+
+  grey: $color-grey,
+
+  dark:     $color-grey-dark,
+  darker:   $color-grey-darker,
+  darkest:  $color-grey-darkest,
+
+  light:    $color-grey-light,
+  lighter:  $color-grey-lighter,
+
+  transparent: transparent,
+
+  layer:    rgba($color-grey-darkest, .8)
+);
+
+@each $c, $color in $our-colors {
+
+  // Text colors
+  .u-color--#{$c},
+  .u-color--#{$c}-hover:hover {
+    color: $color;
+  }
+
+  // Background colors
+  .u-background--#{$c},
+  .u-background--#{$c}-hover:hover {
+    background-color: $color;
     transition: $base-transition;
   }
-}
 
-
-//Clearfix
-
-.u-clearfix {
-  @include clearfix;
-}
-
-// Margin
-.u-margin-top {
-  margin-top: $base-spacing-unit;
-}
-
-.u-margin-bottom {
-  margin-bottom: $base-spacing-unit;
-}
-
-.u-no-margin-bottom {
-  margin-bottom: 0;
-}
-
-.u-margin-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.u-margin-right-10 {
-  margin-right: 10px;
-}
-
-.u-margin-left-40 {
-  margin-left: 40%;
-}
-.u-margin-right-40 {
-  margin-right: 40%;
-}
-
-.u-no-margin {
-  margin: 0;
-
-  &-sm {
-    @include media-query(small) {
-      margin: 0;
-    }
-  }
-}
-.u-05of12{
-  width: (100%/12)/2;
-}
-
-// Position
-.u-is-absolute {
-  position: absolute;
-}
-
-.u-is-relative {
-  position: relative;
-}
-
-.u-is-fixed {
-  position: fixed;
-}
-
-.u-is-above {
-  z-index: 9999;
-}
-
-.u-is-bottom {
-  bottom: 0;
-}
-
-.u-is-top {
-  top: 0;
-}
-
-.u-is-left {
-  left: 0;
-}
-
-.u-is-right {
-  right: 0;
-}
-
-.u-is-centered {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.u-is-centered--vertical {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.u-is-centered--total {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-// Padding
-.u-padding{
-  padding: $base-spacing-unit / 2;
-  @include media-query(start) {
-    padding: $base-spacing-unit;
-  }
-
-  &--top {
-    padding-top: $base-spacing-unit;
-  }
-
-}
-
-.u-padding-50-top {
-  padding-top: 50%;
-}
-
-// Borders
-
-.u-border-right {
-  border-right: 1px solid $color-grey-lighter;
-  &-sm {
-    @include media-query(small) {
-      border-right: 1px solid $color-grey-lighter;
-    }
-  }
-}
-.u-border-left {
-  border-left: 1px solid $color-grey-lighter;
-  &-sm {
-    @include media-query(small) {
-      border-left: 1px solid $color-grey-lighter;
-    }
-  }
-}
-.u-border-bottom {
-  border-bottom: 1px solid $color-grey-lighter;
-  &-sm {
-    @include media-query(small) {
-      border-bottom: 1px solid $color-grey-lighter;
-    }
-  }
-
-  &--darker {
-    border-bottom: 1px solid $color-grey-darker;
-  }
-
-  &--dark {
-    border-bottom: 1px solid $color-grey-dark;
-  }
-
-  &--light {
-    border-bottom: 1px solid $color-grey-light;
-  }
-}
-.u-border-top {
-  border-top: 1px solid $color-grey-dark;
-  &-sm {
-    @include media-query(small) {
-      border-top: 1px solid $color-grey-dark;
+  // Fill (svg)
+  .u-fill--#{$c} {
+    &, & * {
+      fill: $color;
     }
   }
 }
 
-// Radius
-.u-rounded{
-  border-radius: 9999px;
-}
 
-// Overflow
-
-.u-overflow-hidden,
-.u-overflow-hidden-alt {
-  overflow: hidden;
-}
-
-
-.u-inline-block {
-  display: inline-block;
-  &--top {
-    vertical-align: top;
-  }
-
-  &--middle {
-    vertical-align: middle;
-  }
-
-  &--bottom {
-    vertical-align: bottom;
-  }
-}
-
-.u-block {
-  display: block;
-}
-
-.u-not-float {
-  float: none !important;
-}
-
-
-.u-table {
-  display: table;
-}
-
-.u-table-cell {
-  display: table-cell;
-}
-
-
-// CSS3 Columns
+/*
+    CSS3 columns
+   ========================================================================== */
 
 @for $i from 2 through 3 {
   @include media-query(small) {
@@ -562,23 +166,39 @@
     }
   }
   @include media-query(large) {
-    .u-css-columns-#{$i}-lg {
+    .u-css-columns-#{$i}--large {
       column-count: $i;
     }
   }
 }
 
-// Max widths
 
-@mixin max-width($max-widths, $max-width-breakpoint: null) {
-    @each $i in $max-widths {
-        .u-max-width-#{$i}#{$max-width-breakpoint} {
-            max-width: 1px * $i;
-        }
-    }
+
+/*
+   Translations
+   ========================================================================== */
+$translations: 100 50;
+
+@each $t in $translations {
+  .u-translate--#{$t} {
+    transform:  translateY(1% * $t);
+  }
+  .u-translate--#{$t}-n {
+    transform:  translateY(-1% * $t);
+  }
 }
 
-@include max-width(72 200 400 500 600 800 1024);
-@include media-query(small) {
-  @include max-width(700 800, -sm);
+
+
+
+
+/*
+   Line Height
+   ========================================================================== */
+$line-heights: 15 150 200 300;
+
+@each $ln in $line-heights {
+  .u-line-height--#{$ln} {
+    line-height:  $ln / 100;
+  }
 }

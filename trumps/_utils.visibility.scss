@@ -1,6 +1,6 @@
-/*------------------------------------*\
-    #BREAKPOINT VISIBILITY
-\*------------------------------------*/
+/*
+   Visibility utilities
+   ========================================================================== */
 
 /**
  * Hide when screen is < 400px
@@ -86,8 +86,7 @@
   }
 }
 
-.u-hide-always,
-[name='google_conversion_frame'] {
+.u-hide-always {
   display: none !important;
 }
 

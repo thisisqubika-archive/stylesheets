@@ -5,10 +5,6 @@
   height: 100%;
 }
 
-.o-box--small{
-  padding: $base-spacing-unit;
-}
-
 .o-box__stuff {
   display: table-cell;
   vertical-align: middle;
@@ -78,16 +74,13 @@ $proportions-list: (
     @include box-ratio(-large);
   }
 
-  %o-box__stuff--fixed {
+
+  [class*='o-box--'] > .o-box__stuff {
     display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     height: auto;
-  }
-
-  @each $i, $padding in $proportions-list {
-    [class*='o-box--#{$i}'] > .o-box__stuff {
-      @extend %o-box__stuff--fixed;
-    }
+    padding: 0;
+    width: 100%;
   }

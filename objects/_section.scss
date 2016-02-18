@@ -1,38 +1,8 @@
 .o-section {
+  @include clearfix;
   position: relative;
   width: 100%;
   overflow: hidden;
-  @include clearfix;
-
-  &--dark {
-    background: $color-grey-dark;
-  }
-
-  &--darker {
-    background: $color-grey-darker;
-  }
-
-  &--darkest {
-    background: $color-grey-darkest;
-  }
-
-  &--orange {
-    background: $color-brand-primary;
-  }
-
-  &--main {
-    height: 100%;
-
-    @include media-query(small) {
-      height: 50%;
-    }
-  }
-
-  &--first{
-    @include media-query(small) {
-      margin-top: $icon-height;
-    }
-  }
 }
 
 .o-section__title {
@@ -44,4 +14,8 @@
   }
   text-align: center;
   text-transform: uppercase;
+}
+
+.o-section__title--shorter {
+  padding-top: 60px;
 }

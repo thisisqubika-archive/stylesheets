@@ -23,12 +23,15 @@ $inuit-responsive-settings:   true;
 $inuit-layout-namespace:      'o-' ;
 $inuit-enable-layout--flush:   true;
 
+$inuit-pack-namespace:        'o-' ;
+$inuit-enable-pack--middle:   true;
+
 //
 $inuit-use-fractions:         false;
 
 $wraper-width-default: 320px;
-$wraper-width-start:   600px;
-$wraper-width-small:   800px;
+$wraper-width-start:   800px;
+$wraper-width-small:   1100px;
 
 
 $breakpoints: (
@@ -51,3 +54,24 @@ $inuit-heading-size-1:  $inuit-heading-size-2 * 1.2555;
 
 $inuit-widths-columns: (1,2,3,4,5,6,7,8,12);
 $inuit-widths-columns-responsive: $inuit-widths-columns;
+
+//
+$inuit-spacing-namespace:      'u-' ;
+
+$inuit-enable-margins:                    true;
+$inuit-enable-margins--tiny:              true;
+$inuit-enable-margins--small:             true;
+$inuit-enable-margins--large:             true;
+$inuit-enable-margins--huge:              true;
+$inuit-enable-margins--none:              true;
+
+$inuit-enable-paddings:                   true;
+$inuit-enable-paddings--tiny:             true;
+$inuit-enable-paddings--small:            true;
+$inuit-enable-paddings--large:            true;
+$inuit-enable-paddings--huge:             true;
+
+$inuit-enable-responsive-margins:         true;
+$inuit-enable-responsive-margins--none:   true;
+$inuit-enable-responsive-paddings:         true;
+$inuit-enable-responsive-paddings--none:   true;

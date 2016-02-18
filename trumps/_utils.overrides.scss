@@ -1,0 +1,19 @@
+/*
+   Some properties that must be fixed
+   ========================================================================== */
+
+.o-layout {
+  @include clearfix;
+}
+
+.o-layout__item {
+  float: left;
+}
+
+.u-overflow-hidden-alt {
+  overflow: hidden;
+}
+
+[name='google_conversion_frame'] {
+  display: none !important;
+}
