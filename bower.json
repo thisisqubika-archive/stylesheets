@@ -25,7 +25,6 @@
     "gulpfile.json"
   ],
   "dependencies": {
-    "pygments": "^2.0.2",
     "inuit-reset": "~0.1.1",
     "inuit-shared": "~0.1.5",
     "inuit-page": "~0.2.1",

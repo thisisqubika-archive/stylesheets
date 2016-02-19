@@ -1,7 +1,8 @@
 $base-font-size:              16px;
 $inuit-base-font-size:        $base-font-size;
 
-$base-line-height:            20px;
+$base-line-height:            30px;
+$inuit-line-height:           $base-line-height;
 $inuit-base-line-height:      $base-line-height;
 
 $base-radius:                 999999px;
@@ -25,6 +26,9 @@ $inuit-enable-layout--flush:   true;
 
 $inuit-pack-namespace:        'o-' ;
 $inuit-enable-pack--middle:   true;
+$inuit-enable-pack--tiny:     true;
+$inuit-pack-gutter--tiny:     $base-spacing-unit;
+
 
 //
 $inuit-use-fractions:         false;
@@ -73,5 +77,16 @@ $inuit-enable-paddings--huge:             true;
 
 $inuit-enable-responsive-margins:         true;
 $inuit-enable-responsive-margins--none:   true;
-$inuit-enable-responsive-paddings:         true;
-$inuit-enable-responsive-paddings--none:   true;
+$inuit-enable-responsive-paddings:        true;
+$inuit-enable-responsive-paddings--none:  true;
+
+
+
+
+
+
+// Namespace.
+//
+// Would you like inuitcss’ classes to be prepended with a namespace? If so,
+// define it here.
+$inuit-namespace:               null !default;
