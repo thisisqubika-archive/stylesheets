@@ -8,7 +8,7 @@
 //
 
 $utilities: (
-  'float':                    responsive_false     left right,
+  'float':                    responsive_true      left right none,
   'clear':                    responsive_false     left right both,
   'text-align':               responsive_false     center left right,
   'text-decoration':          responsive_false     line-through none,
@@ -29,12 +29,10 @@ $utilities: (
   //
 
   @for $n from 2 through length($property) {
-    @if nth($property, 1) == responsive_false {
-      .u-#{$i}--#{nth($property, $n)} {
-        #{$i}: nth($property, $n);
-      }
+    .u-#{$i}--#{nth($property, $n)} {
+      #{$i}: nth($property, $n);
     }
-    @else {
+    @if nth($property, 1) == responsive_true {
       .u-#{$i}--#{nth($property, $n)} {
         @include media-query(start) {
           &-start {
