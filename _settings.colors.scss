@@ -1,25 +1,25 @@
-$color-brand-primary:               #FF8D40;
-$color-brand-primary-highlight:     lighten($color-brand-primary, 5%);
-$color-brand-primary-shadow:        darken($color-brand-primary,  5%);
+// ==========================================================================
+// Colors
+// ==========================================================================
 
-$color-ui:                          #e4e4e4;
+$color-brand-primary:                   #ff8d40;
+$color-brand-primary-highlight:         lighten($color-brand-primary, 5%);
+$color-brand-primary-shadow:            darken($color-brand-primary, 5%);
 
-$color-grey:                        #737373;
-$color-grey-dark:                   mix($color-grey, black, 50%);
-$color-grey-darker:                 mix($color-grey, black, 35%);
-$color-grey-darkest:                mix($color-grey, black, 25%);
-$color-grey-light:                  mix($color-grey, white, 50%);
-$color-grey-lighter:                mix($color-grey, white, 15%);
+$color-ui:                              #e4e4e4;
 
-
-
-
+$color-grey:                            #737373;
+$color-grey-dark:                       mix($color-grey, #000, 50%);
+$color-grey-darker:                     mix($color-grey, #000, 35%);
+$color-grey-darkest:                    mix($color-grey, #000, 25%);
+$color-grey-light:                      mix($color-grey, #fff, 50%);
+$color-grey-lighter:                    mix($color-grey, #fff, 15%);
 
 // Reassign literal variables to meaningful ones.
 $color-page-text:                       $color-grey-dark;
-$inuit-base-text-color:		 			$color-page-text;
+$inuit-base-text-color:		 			        $color-page-text;
 $color-page-background:                 #fff;
-$inuit-base-background-color: 			$color-page-background;
+$inuit-base-background-color: 			    $color-page-background;
 
 $color-logo:                            $color-brand-primary;
 
@@ -49,12 +49,6 @@ $color-testimonial-background:          $color-grey-lighter;
 $color-testimonial-source:              $color-grey;
 $color-testimonial-quote:               $color-grey-light;
 
-//Cases
-$everbeing-color: #00347E;
-$zuki-color: #818181;
-$bancard-color: #00347E;
-$pr-color: #00347E;
-
 // Status
-$success-color: #67FF59;
-$error-color: #D45659;
+$success-color:                         #67FF59;
+$error-color:                           #D45659;
