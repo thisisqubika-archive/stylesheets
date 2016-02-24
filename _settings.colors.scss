@@ -2,18 +2,18 @@
 // Colors
 // ==========================================================================
 
-$color-brand-primary:                   #FF8D40;
+$color-brand-primary:                   #ff8d40;
 $color-brand-primary-highlight:         lighten($color-brand-primary, 5%);
-$color-brand-primary-shadow:            darken($color-brand-primary,  5%);
+$color-brand-primary-shadow:            darken($color-brand-primary, 5%);
 
 $color-ui:                              #e4e4e4;
 
-$color-grey:                             #737373;
-$color-grey-dark:                       mix($color-grey, black, 50%);
-$color-grey-darker:                     mix($color-grey, black, 35%);
-$color-grey-darkest:                    mix($color-grey, black, 25%);
-$color-grey-light:                      mix($color-grey, white, 50%);
-$color-grey-lighter:                    mix($color-grey, white, 15%);
+$color-grey:                            #737373;
+$color-grey-dark:                       mix($color-grey, #000, 50%);
+$color-grey-darker:                     mix($color-grey, #000, 35%);
+$color-grey-darkest:                    mix($color-grey, #000, 25%);
+$color-grey-light:                      mix($color-grey, #fff, 50%);
+$color-grey-lighter:                    mix($color-grey, #fff, 15%);
 
 // Reassign literal variables to meaningful ones.
 $color-page-text:                       $color-grey-dark;
