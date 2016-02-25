@@ -1,86 +1,91 @@
+/* ==========================================================================
+   Box
+   ========================================================================== */
+
+/**
+ * An object to place any stuff centered.
+ */
+
 .o-box {
-  text-align: center;
   display: table;
-  width: 100%;
   height: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .o-box__stuff {
   display: table-cell;
-  vertical-align: middle;
   padding: $base-spacing-unit;
   position: relative;
-  font-size: 1em;
+  vertical-align: middle;
 
   @include media-query(large) {
     padding-left: $base-spacing-unit * 2;
     padding-right: $base-spacing-unit * 2;
   }
-
-  &--white {
-    background-color: white;
-  }
-
-  &--bottom {
-    vertical-align: bottom;
-  }
-
-  &--text-left {
-    text-align: left;
-  }
 }
 
+
+
+
+
+/* ==========================================================================
+   Special fixed-aspect-ratio padded Box
+   ========================================================================== */
+
+/**
+ * This uses the well known resource for fixed aspect ratio with
+ * the padding-bottom property.
+ * Here is a good explanation of haw it works:
+ * http://alistapart.com/article/creating-intrinsic-ratios-for-video
+ *
+ * Includes responsive behavior.
+ */
 
 $proportions-list: (
   '1x1': percentage(1 / 1),
   '2x1': percentage(1 / 2),
-  '1x2': percentage(2 / 1),
   '4x3': percentage(3 / 4),
   '2x3': percentage(3 / 2),
   '3x1': percentage(1 / 3),
-  '3x2': percentage(2 / 3),
   '3x4': percentage(4 / 3),
   '9x4': percentage(4 / 9),
   '16x9': percentage(9 / 16),
   auto: 0
-
 );
 
-
 @mixin box-ratio($grid-breakpoint: null) {
-    @each $i, $padding in $proportions-list {
-        .o-box--#{$i}#{$grid-breakpoint} {
-            padding-bottom: $padding;
-            display: block;
-            position: relative;
-            margin: 0 auto;
-            overflow: hidden;
-        }
+  @each $i, $padding in $proportions-list {
+    .o-box--#{$i}#{$grid-breakpoint} {
+      display: block;
+      overflow: hidden;
+      padding-bottom: $padding;
+      position: relative;
     }
+  }
+}
+
+@include box-ratio;
+
+@include media-query(start) {
+  @include box-ratio(-start);
+}
+
+@include media-query(small) {
+  @include box-ratio(-small);
+}
+
+@include media-query(large) {
+  @include box-ratio(-large);
 }
 
 
-  @include box-ratio;
-
-  @include media-query(start) {
-    @include box-ratio(-start);
-  }
-
-  @include media-query(small) {
-    @include box-ratio(-small);
-  }
-
-  @include media-query(large) {
-    @include box-ratio(-large);
-  }
-
-
-  [class*='o-box--'] > .o-box__stuff {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: auto;
-    padding: 0;
-    width: 100%;
-  }
+[class*='o-box--'] > .o-box__stuff {
+  display: block;
+  height: auto;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}

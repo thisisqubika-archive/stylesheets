@@ -1,9 +1,0 @@
-a {
-    color: $color-links;
-    font-weight: 400;
-    text-decoration: none;
-
-    @include hocus() {
-        text-decoration: underline;
-    }
-}

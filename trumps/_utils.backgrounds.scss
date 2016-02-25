@@ -45,7 +45,7 @@
   transition: transform .3s ease;
 
   &:hover,
-  a:hover &{
+  a:hover & {
     transform: scale(1.1);
   }
 }

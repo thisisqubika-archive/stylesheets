@@ -3,24 +3,20 @@
    ========================================================================== */
 
 .u-background-layer {
-  background-color: rgba(black, .75);
-  position: absolute;
-  width: 100%;
+  background-color: rgba($black, .75);
   height: 100%;
-  top: 0;
   left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .u-gradient-background {
-  background-image: linear-gradient( to top , rgba($color-grey-darker, 1), rgba($color-grey-darker, 0) );
-}
-
-.u-gradient-background--alt {
-  background-image: linear-gradient( to top , rgba($color-grey-darker, 0), rgba($color-grey-darker, .25) );
+  background-image: linear-gradient(to top , rgba($color-grey-darker, 1), rgba($color-grey-darker, 0));
 }
 
 .u-gradient-shadow {
-  background-image: linear-gradient( to top , rgba($color-grey-darker, 0), rgba($color-grey-darker, 0) calc(100% - #{$base-spacing-unit}),rgba($color-grey-darker, .25) );
+  background-image: linear-gradient(to top , rgba($color-grey-darker, 0), rgba($color-grey-darker, 0) calc(100% - #{$base-spacing-unit}), rgba($color-grey-darker, .25));
 }
 
 .u-background-grey-hover:hover {

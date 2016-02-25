@@ -1,9 +1,0 @@
-/*
- * We need in order to override user-agent default font-weight and Inuit line-height.
- */
-
-
-h1, h2, h3, h4, h5 {
-   font-weight: 300; /* Be specific */
-   line-height: 1.5;
-}

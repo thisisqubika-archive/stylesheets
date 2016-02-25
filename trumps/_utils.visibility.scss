@@ -8,7 +8,7 @@
 
 .u-mobile-only {
   @include media-query(start) {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -18,7 +18,7 @@
 
 .u-hide-mobile {
   @media screen and (max-width: 400px) {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -27,14 +27,14 @@
  */
 
 .u-start-only {
-  display: none !important;
+  display: none;
 
   @include media-query(start) {
-    display: block !important;
+    display: initial;
   }
 
   @include media-query(small) {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -43,10 +43,10 @@
  */
 
 .u-start-up {
-  display: none !important;
+  display: none;
 
   @include media-query(start) {
-    display: block !important;
+    display: initial;
   }
 }
 
@@ -55,10 +55,10 @@
  */
 
 .u-hide-small {
-  display: block !important;
+  display: initial;
 
   @include media-query(small) {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -67,10 +67,10 @@
  */
 
 .u-small-up {
-  display: none !important;
+  display: none;
 
   @include media-query(small) {
-    display: block !important;
+    display: initial;
   }
 }
 
@@ -79,27 +79,27 @@
  */
 
 .u-large-up {
-  display: none !important;
+  display: none;
 
   @include media-query(large) {
-    display: block !important;
+    display: initial;
   }
 }
 
 .u-hide-always {
-  display: none !important;
+  display: none;
 }
 
 
-.u-show-on-hover{
+.u-show-on-hover {
 
   @include media-query(small) {
     opacity: 0;
     transition: opacity .2s ease;
 
-    &:hover{
-      opacity: 1;
+    &:hover {
       cursor: hover;
+      opacity: 1;
     }
   }
 }
