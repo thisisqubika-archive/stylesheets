@@ -3,46 +3,46 @@
  */
 
 [data-image] {
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
-[data-image*='full-auto'] {
+[data-image*="full-auto"] {
   background-size: 100% auto;
 }
 
-[data-image*='auto-full'] {
+[data-image*="auto-full"] {
   background-size: auto 100%;
 }
 
-[data-image*='full-full'] {
+[data-image*="full-full"] {
   background-size: 100% 100%;
 }
 
-[data-image*='center-top'] {
+[data-image*="center-top"] {
   background-position: center top;
 }
 
-[data-image*='left-top'] {
+[data-image*="left-top"] {
   background-position: left top;
 }
 
-[data-image*='left-center'] {
+[data-image*="left-center"] {
   background-position: left center;
 }
 
-[data-image*='right-top'] {
+[data-image*="right-top"] {
   background-position: right top;
 }
 
-[data-image*='right-center'] {
+[data-image*="right-center"] {
   background-position: right center;
 }
 
-[data-image*='hover-resized'] {
+[data-image*="hover-resized"] {
   transform: scale(1);
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 
   &:hover,
   a:hover & {

@@ -6,15 +6,10 @@ $white:                                 #fff;
 $black:                                 #000;
 
 $color-brand-primary:                   #ff8d40;
-$color-brand-primary-highlight:         lighten($color-brand-primary, 5%);
-$color-brand-primary-shadow:            darken($color-brand-primary, 5%);
-
-$color-ui:                              #e4e4e4;
 
 $color-grey:                            #737373;
 $color-grey-dark:                       mix($color-grey, $black, 50%);
-$color-grey-darker:                     mix($color-grey, $black, 35%);
-$color-grey-darkest:                    mix($color-grey, $black, 25%);
+$color-grey-darker:                     mix($color-grey, $black, 25%);
 $color-grey-light:                      mix($color-grey, $white, 50%);
 $color-grey-lighter:                    mix($color-grey, $white, 15%);
 
@@ -37,7 +32,7 @@ $color-btn-background:                  $color-brand-primary;
 $color-btn-background-hover:            $color-brand-primary-shadow;
 $color-btn-secondary:                   #fff;
 $color-btn-secondary-background:        transparent;
-$color-btn-secondary-background-hover:  rgba($color-grey, .5);
+$color-btn-secondary-background-hover:  rgba($color-grey, 0.5);
 
 $color-page-foot:                       #fff;
 $color-page-foot-background:            $color-grey-darker;

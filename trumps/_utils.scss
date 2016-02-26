@@ -8,17 +8,17 @@
 //
 
 $utilities: (
-  'float':                    responsive_true      left right none,
-  'clear':                    responsive_false     left right both,
-  'text-align':               responsive_false     center left right,
-  'text-decoration':          responsive_false     line-through none,
-  'font-weight':              responsive_false     300 800 400,
-  'list-style':               responsive_false     none,
-  'margin-left':              responsive_false     auto,
-  'margin-right':             responsive_false     auto,
-  'position':                 responsive_false     absolute relative fixed,
-  'overflow':                 responsive_false     hidden,
-  'display':                  responsive_false     block inline-block inline none table table-cell responsive,
+  "float":                    responsive_true      left right none,
+  "clear":                    responsive_false     left right both,
+  "text-align":               responsive_false     center left right,
+  "text-decoration":          responsive_false     line-through none,
+  "font-weight":              responsive_false     300 800 400,
+  "list-style":               responsive_false     none,
+  "margin-left":              responsive_false     auto,
+  "margin-right":             responsive_false     auto,
+  "position":                 responsive_false     absolute relative fixed,
+  "overflow":                 responsive_false     hidden,
+  "display":                  responsive_false     block inline-block inline none table table-cell responsive,
 );
 
 @each $i, $property in $utilities {
@@ -108,20 +108,19 @@ $our-colors: (
   white: white,
   black: black,
 
-  orange: $color-brand-primary,
+  orange:   $color-brand-primary,
 
-  grey: $color-grey,
+  grey:     $color-grey,
 
   dark:     $color-grey-dark,
   darker:   $color-grey-darker,
-  darkest:  $color-grey-darkest,
 
   light:    $color-grey-light,
   lighter:  $color-grey-lighter,
 
   transparent: transparent,
 
-  layer:    rgba($color-grey-darkest, .8)
+  layer:    rgba($color-grey-darker, 0.8)
 );
 
 @each $c, $color in $our-colors {
@@ -135,8 +134,8 @@ $our-colors: (
   // Background colors
   .u-background--#{$c},
   .u-background--#{$c}-hover:hover {
-    background-color: $color;
     transition: $base-transition;
+    background-color: $color;
   }
 
   // Fill (svg)
@@ -155,7 +154,7 @@ $our-colors: (
 
 @for $i from 2 through 3 {
   @include media-query(small) {
-    // Autoprefixr can't help here, so:
+    // Autoprefixr can"t help here, so:
     // scss-lint:disable PropertySortOrder
     .u-css-columns-#{$i} {
       column-break-inside: avoid;

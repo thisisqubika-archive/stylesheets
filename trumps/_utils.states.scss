@@ -29,8 +29,8 @@
 // I consider this a valid BEM format
 // scss-lint:disable SelectorFormat
 .u-is-centered--total {
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 

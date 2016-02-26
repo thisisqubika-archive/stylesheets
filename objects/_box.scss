@@ -8,20 +8,20 @@
 
 .o-box {
   display: table;
+  width: 100%;
   height: 100%;
   text-align: center;
-  width: 100%;
 }
 
 .o-box__stuff {
   display: table-cell;
-  padding: $base-spacing-unit;
   position: relative;
+  padding: $base-spacing-unit;
   vertical-align: middle;
 
   @include media-query(large) {
-    padding-left: $base-spacing-unit * 2;
     padding-right: $base-spacing-unit * 2;
+    padding-left: $base-spacing-unit * 2;
   }
 }
 
@@ -43,14 +43,14 @@
  */
 
 $proportions-list: (
-  '1x1': percentage(1 / 1),
-  '2x1': percentage(1 / 2),
-  '4x3': percentage(3 / 4),
-  '2x3': percentage(3 / 2),
-  '3x1': percentage(1 / 3),
-  '3x4': percentage(4 / 3),
-  '9x4': percentage(4 / 9),
-  '16x9': percentage(9 / 16),
+  "1x1": percentage(1 / 1),
+  "2x1": percentage(1 / 2),
+  "4x3": percentage(3 / 4),
+  "2x3": percentage(3 / 2),
+  "3x1": percentage(1 / 3),
+  "3x4": percentage(4 / 3),
+  "9x4": percentage(4 / 9),
+  "16x9": percentage(9 / 16),
   auto: 0
 );
 
@@ -58,9 +58,9 @@ $proportions-list: (
   @each $i, $padding in $proportions-list {
     .o-box--#{$i}#{$grid-breakpoint} {
       display: block;
-      overflow: hidden;
-      padding-bottom: $padding;
       position: relative;
+      padding-bottom: $padding;
+      overflow: hidden;
     }
   }
 }
@@ -80,12 +80,12 @@ $proportions-list: (
 }
 
 
-[class*='o-box--'] > .o-box__stuff {
+[class*="o-box--"] > .o-box__stuff {
   display: block;
-  height: auto;
-  padding: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  padding: 0;
   width: 100%;
+  height: auto;
 }
