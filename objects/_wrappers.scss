@@ -14,12 +14,12 @@ $wraper-width-small:   1100px  !default;
 
 .o-wrapper {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $wraper-width-default;
-  padding-left: $base-spacing-unit;
-  padding-right: $base-spacing-unit;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $base-spacing-unit;
+  padding-left: $base-spacing-unit;
+  max-width: $wraper-width-default;
 
   @include media-query(start) {
     max-width: $wraper-width-start;

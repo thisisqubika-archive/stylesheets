@@ -94,12 +94,12 @@
 .u-show-on-hover {
 
   @include media-query(small) {
+    transition: opacity 0.2s ease;
     opacity: 0;
-    transition: opacity .2s ease;
 
     &:hover {
-      cursor: hover;
       opacity: 1;
+      cursor: hover;
     }
   }
 }
