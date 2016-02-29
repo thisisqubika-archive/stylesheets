@@ -54,6 +54,22 @@
   height: auto;
 }
 
+// Buttons animation
+
+@keyframes a-btn-arrow {
+  0% {transform: translate(0, 0);}
+  51% {transform: translate(140px, 0);}
+  51.1% {transform: translate(-70px, 0);}
+  100% {transform: translate(0, 0);}
+}
+
+@keyframes a-btn-text {
+  0% {opacity: 1;}
+  25% {opacity: 0;}
+  51.1% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .c-btn--special {
   overflow: hidden;
 }
