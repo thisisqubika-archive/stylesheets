@@ -22,14 +22,14 @@ $inuit-base-background-color: 			    $color-page-background;
 $color-logo:                            $color-brand-primary;
 
 $color-links:                           $color-brand-primary;
-$color-links-hover:                     $color-brand-primary-shadow;
+$color-links-hover:                     darken($color-brand-primary, 5%);
 
 $color-page-head:                       #fff;
 $color-page-head-background:            transparent;
 
 $color-btn:                             #fff;
 $color-btn-background:                  $color-brand-primary;
-$color-btn-background-hover:            $color-brand-primary-shadow;
+$color-btn-background-hover:            darken($color-brand-primary, 5%);
 $color-btn-secondary:                   #fff;
 $color-btn-secondary-background:        transparent;
 $color-btn-secondary-background-hover:  rgba($color-grey, 0.5);

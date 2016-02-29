@@ -167,7 +167,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: strict_BEM # or 'hyphenated_lowercase', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: hyphenated_BEM # 'strict_BEM' or 'hyphenated_lowercase', or 'hyphenated_lowercase', or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
     enabled: true

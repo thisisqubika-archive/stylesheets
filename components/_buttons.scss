@@ -1,0 +1,79 @@
+.c-btn {
+  display: inline-block;
+  margin: 0;
+  border: transparent 1px solid;
+  cursor: pointer;
+  padding: 0 $base-spacing-unit;
+  height: $logo-height;
+  vertical-align: middle;
+  text-align: center;
+  font: inherit;
+
+  @include hocus() {
+    text-decoration: none;
+  }
+}
+
+.c-btn--primary {
+  transition: $base-transition;
+  border-radius: 999px;
+  background-color: $color-btn-background;
+  line-height: $logo-height;
+  color: $color-btn;
+
+  @include hocus() {
+    background-color: $color-btn-background-hover;
+  }
+}
+
+.c-btn--secondary {
+  transition: $base-transition;
+  border: $color-btn-secondary 1px solid;
+  border-radius: 999px;
+  background-color: $color-btn-secondary-background;
+  line-height: $logo-height - 2;
+  color: $color-btn-secondary;
+
+  @include hocus() {
+    background-color: $color-btn-secondary-background-hover;
+  }
+}
+
+.c-btn--alt {
+  transition: $base-transition;
+  border: $color-btn-background 1px solid;
+  border-radius: 999px;
+  background-color: $color-btn;
+  min-width: 100px;
+  line-height: $logo-height;
+  color: $color-btn-background;
+}
+
+.c-btn--large {
+  padding: $base-spacing-unit ($base-spacing-unit * 2);
+  height: auto;
+}
+
+.c-btn--special {
+  overflow: hidden;
+}
+
+.c-btn__icon {
+  line-height: $base-font-size;
+  font-size: 19px;
+
+  .c-btn--special:hover & {
+    animation: a-btn-arrow ease-in-out 0.75s;
+    animation-iteration-count: 1;
+  }
+
+}
+
+.c-btn__text {
+  margin-left: 1em;
+
+  .c-btn--special:hover & {
+    animation: a-btn-text ease-in-out 0.75s;
+    animation-iteration-count: 1;
+  }
+}
