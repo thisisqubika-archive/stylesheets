@@ -13,6 +13,10 @@ $color-grey-darker:                     mix($color-grey, $black, 25%);
 $color-grey-light:                      mix($color-grey, $white, 50%);
 $color-grey-lighter:                    mix($color-grey, $white, 15%);
 
+
+
+
+
 // Reassign literal variables to meaningful ones.
 $color-page-text:                       $color-grey-dark;
 $inuit-base-text-color:		 			        $color-page-text;
@@ -34,18 +38,9 @@ $color-btn-secondary:                   #fff;
 $color-btn-secondary-background:        transparent;
 $color-btn-secondary-background-hover:  rgba($color-grey, 0.5);
 
-$color-page-foot:                       #fff;
-$color-page-foot-background:            $color-grey-darker;
 
-$color-panel-background:                #fff;
-$color-panel-inverse:                   #fff;
-$color-panel-inverse-background:        $color-brand-primary;
-$color-panel-link:                      $color-grey-dark;
-$color-panel-link-hover:                $color-brand-primary;
 
-$color-testimonial-background:          $color-grey-lighter;
-$color-testimonial-source:              $color-grey;
-$color-testimonial-quote:               $color-grey-light;
+
 
 // Status
 $success-color:                         #67ff59;

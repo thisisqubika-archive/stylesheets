@@ -39,21 +39,6 @@
   }
 }
 
-.c-btn--alt {
-  transition: $base-transition;
-  border: $color-btn-background 1px solid;
-  border-radius: 999px;
-  background-color: $color-btn;
-  min-width: 100px;
-  line-height: $logo-height;
-  color: $color-btn-background;
-}
-
-.c-btn--large {
-  padding: $base-spacing-unit ($base-spacing-unit * 2);
-  height: auto;
-}
-
 // Buttons animation
 
 @keyframes a-btn-arrow {
@@ -75,6 +60,7 @@
 }
 
 .c-btn__icon {
+  display: inline-block;
   line-height: $base-font-size;
   font-size: 19px;
 
@@ -82,7 +68,6 @@
     animation: a-btn-arrow ease-in-out 0.75s;
     animation-iteration-count: 1;
   }
-
 }
 
 .c-btn__text {
