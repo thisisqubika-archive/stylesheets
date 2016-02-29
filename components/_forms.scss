@@ -1,0 +1,60 @@
+.c-form__item {
+  position: relative;
+  margin-bottom: $base-spacing-unit;
+
+}
+
+.c-form__field {
+  position: relative;
+  transition: $base-transition ease;
+  outline: 0;
+  border: 1px solid $color-grey-lighter;
+  background-image: url("placeholdit.imgix.net/~text?txtsize=24&bg=transparent&txtclr=ff8d40&txt=%E2%96%B8&w=50&h=50&txttrack=0");
+  background-repeat: no-repeat;
+  background-position: -50px 5px;
+  background-size: auto 45px;
+  padding: $base-spacing-unit * 0.75 $base-spacing-unit * 1.5;
+  width: 100%;
+  height: $base-spacing-unit * 3;
+  color: mix($white, $black, 50%);
+
+  .c-form--dark & {
+    border-color: $color-grey;
+    background-color: $color-grey-dark;
+  }
+
+  &:focus {
+    border-color: $color-brand-primary;
+    background-position: -10px 5px;
+  }
+
+  &--error {
+    border: 1px solid $error-color;
+    color: $error-color;
+  }
+
+  &--required::after {
+    position: absolute;
+    top: 0;
+    right: $base-spacing-unit;
+    z-index: 1;
+    line-height: $base-spacing-unit * 3;
+    color: $color-brand-primary;
+    font-size: 30px;
+    content: "*";
+  }
+}
+
+select.c-form__field {
+  text-indent: $base-spacing-unit;
+
+  &,
+  &:focus {
+    background-image: none;
+  }
+}
+
+textarea.c-form__field {
+  height: $base-spacing-unit * 6;
+  resize: vertical;
+}
