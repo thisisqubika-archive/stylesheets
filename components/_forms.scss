@@ -1,3 +1,5 @@
+$form-field-focus-state-image: "https://placeholdit.imgix.net/~text?txtsize=24&bg=transparent&txtclr=ff8d40&txt=%E2%96%B8&w=50&h=50&txttrack=0";
+
 .c-form__item {
   position: relative;
   margin-bottom: $base-spacing-unit;
@@ -9,7 +11,7 @@
   transition: $base-transition ease;
   outline: 0;
   border: 1px solid $color-grey-lighter;
-  background-image: url("placeholdit.imgix.net/~text?txtsize=24&bg=transparent&txtclr=ff8d40&txt=%E2%96%B8&w=50&h=50&txttrack=0");
+  background-image: url("#{$form-field-focus-state-image}");
   background-repeat: no-repeat;
   background-position: -50px 5px;
   background-size: auto 45px;
