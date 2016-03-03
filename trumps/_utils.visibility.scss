@@ -1,10 +1,10 @@
-/*
-   Visibility utilities
-   ========================================================================== */
+//
+// Visibility utilities
+// ==========================================================================
 
-/**
- * Hide when screen is < 400px
- */
+//
+// Hide when screen is < 400px
+//
 
 .u-mobile-only {
   @include media-query(start) {
@@ -12,9 +12,9 @@
   }
 }
 
-/**
- * Hide when screen is < 400px
- */
+//
+// Hide when screen is < 400px
+//
 
 .u-hide-mobile {
   @media screen and (max-width: 400px) {
@@ -22,15 +22,15 @@
   }
 }
 
-/**
- * Visible only on start screens > 400px and < 800px
- */
+//
+// Visible only on start screens > 400px and < 800px
+//
 
 .u-start-only {
   display: none;
 
   @include media-query(start) {
-    display: initial;
+    display: inherit;
   }
 
   @include media-query(small) {
@@ -38,51 +38,51 @@
   }
 }
 
-/**
- * Visible only on screens > 400px
- */
+//
+// Visible only on screens > 400px
+//
 
 .u-start-up {
   display: none;
 
   @include media-query(start) {
-    display: initial;
+    display: inherit;
   }
 }
 
-/**
- * Visible only on screens < 800px
- */
+//
+// Visible only on screens < 800px
+//
 
 .u-hide-small {
-  display: initial;
+  display: inherit;
 
   @include media-query(small) {
     display: none;
   }
 }
 
-/**
- * Visible only on screens > 800px
- */
+//
+// Visible only on screens > 800px
+//
 
 .u-small-up {
   display: none;
 
   @include media-query(small) {
-    display: initial;
+    display: inherit;
   }
 }
 
-/**
- * Visible only screens > 1250px
- */
+//
+// Visible only screens > 1250px
+//
 
 .u-large-up {
   display: none;
 
   @include media-query(large) {
-    display: initial;
+    display: inherit;
   }
 }
 

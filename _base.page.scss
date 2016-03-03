@@ -1,5 +1,5 @@
-/* Base heritage
-   ========================================================================== */
+// Base heritage
+// ==========================================================================
 
 html {
   height: 100%;
@@ -15,8 +15,8 @@ body {
 
 
 
-/* Links
-   ========================================================================== */
+// Links
+// ==========================================================================
 
 a {
   text-decoration: none;
@@ -32,12 +32,12 @@ a {
 
 
 
-/* Headings
-   ========================================================================== */
+// Headings
+// ==========================================================================
 
-/**
- * We need in order to override user-agent default font-weight and Inuit line-height.
- */
+//
+// We need in order to override user-agent default font-weight and Inuit line-height.
+//
 
 h1,
 h2,
@@ -46,5 +46,5 @@ h4,
 h5,
 h6 {
   line-height: 1.5;
-  font-weight: 300; /* Be specific */
+  font-weight: 300; // Be specific//
 }

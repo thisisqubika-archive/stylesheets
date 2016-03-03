@@ -1,10 +1,10 @@
-/* ==========================================================================
-   Box
-   ========================================================================== */
+// ==========================================================================
+// Box
+// ==========================================================================
 
-/**
- * An object to place any stuff centered.
- */
+//
+// An object to place any stuff centered.
+//
 
 .o-box {
   display: table;
@@ -20,8 +20,8 @@
   vertical-align: middle;
 
   @include media-query(large) {
-    padding-right: $base-spacing-unit * 2;
-    padding-left: $base-spacing-unit * 2;
+    padding-right: $base-spacing-unit;
+    padding-left: $base-spacing-unit;
   }
 }
 
@@ -29,18 +29,18 @@
 
 
 
-/* ==========================================================================
-   Special fixed-aspect-ratio padded Box
-   ========================================================================== */
+// ==========================================================================
+// Special fixed-aspect-ratio padded Box
+// ==========================================================================
 
-/**
- * This uses the well known resource for fixed aspect ratio with
- * the padding-bottom property.
- * Here is a good explanation of haw it works:
- * http://alistapart.com/article/creating-intrinsic-ratios-for-video
- *
- * Includes responsive behavior.
- */
+//
+// This uses the well known resource for fixed aspect ratio with
+// the padding-bottom property.
+// Here is a good explanation of how it works:
+// http://alistapart.com/article/creating-intrinsic-ratios-for-video
+//
+// Includes responsive behavior.
+//
 
 $proportions-list: (
   "1x1": percentage(1 / 1),

@@ -5,7 +5,7 @@
     "Moove-it Team"
   ],
   "description": "This is a project to centralize moove-it web styles with bower.",
-  "main": "aplication.scss",
+  "main": "mooveit.scss",
   "keywords": [
     "Moove-it",
     "Sass",

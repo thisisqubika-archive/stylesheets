@@ -14,6 +14,7 @@
 //
 
 @mixin clearfix($important: false) {
+
   // Determine whether or not to make declarations important.
   @if ($important == false) {
     $important: null;

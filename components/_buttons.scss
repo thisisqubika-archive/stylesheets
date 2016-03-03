@@ -1,3 +1,11 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+//
+// Buttos styles.
+//
+
 .c-btn {
   display: inline-block;
   margin: 0;
@@ -39,8 +47,27 @@
   }
 }
 
-// Buttons animation
 
+
+
+
+//
+// Special button
+// ==========================================================================
+//
+// A special button animated on hover state.
+//
+// Usage:
+//
+// <a href='#' class='c-btn c-btn--primary c-btn--special'>
+//    <span class='c-btn__icon> &#8250; </span>
+//    <span class='c-btn__text> text </span>
+// </a>
+//
+
+//
+// Buttons animation keyframes
+//
 @keyframes a-btn-arrow {
   0% {transform: translate(0, 0);}
   51% {transform: translate(140px, 0);}

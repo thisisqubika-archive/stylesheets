@@ -1,3 +1,23 @@
+// ==========================================================================
+// Alert
+// ==========================================================================
+
+//
+// A component to manage alert messages.
+//
+// Usage:
+//
+// <div class="c-alert c-alert--(1)">
+//   <div class="c-alert__close"></div> (2)
+//   <div class="c-alert__icon"></div> (3)
+//   <div class="c-alert__message"> Message </div>
+// </div>
+//
+// 1: 'error' or 'success' modifier
+// 2: A '˟' character placed top righ to close via js.
+// 3: An optional '✓' or 'i' symbol next to text message.
+//
+
 .c-alert {
   position: relative;
   transition: all 1s ease;
@@ -52,7 +72,7 @@
 
   .c-alert--success &::after {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    content: "\2713";
+    content: "\2713"; /* ✓ */
   }
 }
 

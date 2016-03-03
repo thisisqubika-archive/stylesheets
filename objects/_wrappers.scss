@@ -1,12 +1,12 @@
-/* ==========================================================================
-   Wrapper
-   ========================================================================== */
+// ==========================================================================
+// Wrapper
+// ==========================================================================
 
-/**
- * This is an object that limit the width of the content.
- * It has sense to control phragraphs width and general
- * components proportions through all screen sizes.
- */
+//
+// This is an object that limit the width of the content.
+// It has sense to control phragraphs width and general
+// components proportions through all screen sizes.
+//
 
 $wraper-width-default: 320px   !default;
 $wraper-width-start:   800px   !default;
