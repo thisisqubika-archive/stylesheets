@@ -12,7 +12,7 @@
   border: transparent 1px solid;
   cursor: pointer;
   padding: 0 $base-spacing-unit;
-  height: $base-spacing-unt * 2;
+  height: $base-spacing-unit * 2;
   vertical-align: middle;
   text-align: center;
   font: inherit;
@@ -26,7 +26,7 @@
   transition: $base-transition;
   border-radius: 999px;
   background-color: $color-btn-background;
-  line-height: $base-spacing-unt * 2;
+  line-height: $base-spacing-unit * 2;
   color: $color-btn;
 
   @include hocus() {
@@ -39,7 +39,7 @@
   border: $color-btn-secondary 1px solid;
   border-radius: 999px;
   background-color: $color-btn-secondary-background;
-  line-height: ($base-spacing-unt * 2) - 2;
+  line-height: ($base-spacing-unit * 2) - 2;
   color: $color-btn-secondary;
 
   @include hocus() {
