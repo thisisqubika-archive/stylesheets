@@ -30,7 +30,7 @@
   display: none;
 
   @include media-query(start) {
-    display: inherit;
+    display: initial;
   }
 
   @include media-query(small) {
@@ -46,7 +46,7 @@
   display: none;
 
   @include media-query(start) {
-    display: inherit;
+    display: initial;
   }
 }
 
@@ -55,7 +55,7 @@
 //
 
 .u-hide-small {
-  display: inherit;
+  display: initial;
 
   @include media-query(small) {
     display: none;
@@ -70,7 +70,7 @@
   display: none;
 
   @include media-query(small) {
-    display: inherit;
+    display: initial;
   }
 }
 
@@ -82,7 +82,7 @@
   display: none;
 
   @include media-query(large) {
-    display: inherit;
+    display: initial;
   }
 }
 
