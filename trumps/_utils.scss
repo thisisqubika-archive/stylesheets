@@ -216,27 +216,18 @@ $line-heights: 15 125 150 200 300;
 
 
 //
-// Bottoms
+// Positions
 // ==========================================================================
-$bottoms: 0 20 40;
+$positions: top bottom left right;
+$position-values: 0 20 40;
 
-@each $b in $bottoms {
-  .u-bottom--#{$b} {
-    bottom: 1px * $b;
+@each $p in $positions {
+  .u-#{$p} {
+    @each $pv in $position-values {
+      &--#{$pv} {
+        #{$p}: 1px * $pv;
+      }
+    }
   }
 }
 
-
-
-
-
-//
-// Lefts
-// ==========================================================================
-$lefts: 0 20 40;
-
-@each $l in $lefts {
-  .u-left--#{$l} {
-    left: 1px * $l;
-  }
-}

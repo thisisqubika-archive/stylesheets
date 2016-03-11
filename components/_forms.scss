@@ -12,10 +12,10 @@
 //
 // <form class='c-form'> (1)
 //   <div class='c-form__item'>
-//     <input type='' class='c-form__field />
+//     <input type='' class='c-form__field' />
 //   </div>
 //   <div class='c-form__item'>
-//     <input type='' class='c-form__field />
+//     <input type='' class='c-form__field' />
 //   </div>
 //   ...
 // </form>
@@ -29,6 +29,17 @@ $form-field-focus-state-image: "https://placeholdit.imgix.net/~text?txtsize=24&b
   position: relative;
   margin-bottom: $base-spacing-unit;
 
+  &--required::after {
+    position: absolute;
+    top: 50%;
+    right: $base-spacing-unit;
+    transform: translateY(-50%);
+    z-index: 1;
+    line-height: $base-spacing-unit;
+    color: $color-brand-primary;
+    font-size: 30px;
+    content: "*";
+  }
 }
 
 .c-form__field {
@@ -43,7 +54,6 @@ $form-field-focus-state-image: "https://placeholdit.imgix.net/~text?txtsize=24&b
   background-size: auto 45px;
   padding: $base-spacing-unit;
   width: 100%;
-  height: $base-spacing-unit;
   color: mix($white, $black, 50%);
 
   .c-form--dark & {
@@ -61,16 +71,6 @@ $form-field-focus-state-image: "https://placeholdit.imgix.net/~text?txtsize=24&b
     color: $error-color;
   }
 
-  &--required::after {
-    position: absolute;
-    top: 0;
-    right: $base-spacing-unit;
-    z-index: 1;
-    line-height: $base-spacing-unit;
-    color: $color-brand-primary;
-    font-size: 30px;
-    content: "*";
-  }
 }
 
 // scss-lint:disable QualifyingElement
@@ -85,6 +85,10 @@ select.c-form__field {
 
 // scss-lint:disable QualifyingElement
 textarea.c-form__field {
-  height: $base-spacing-unit;
   resize: vertical;
+}
+
+input[type='file'] {
+  line-height: 1;
+  font-size: 16px;
 }
