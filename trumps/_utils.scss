@@ -216,7 +216,7 @@ $translations: 100 50;
 //
 // Line Height
 // ==========================================================================
-$line-heights: 15 125 150 200 300;
+$line-heights: 100 125 150 200 300;
 
 @each $ln in $line-heights {
   .u-line-height--#{$ln} {
