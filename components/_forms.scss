@@ -76,7 +76,6 @@ $form-field-focus-state-image: "https://placeholdit.imgix.net/~text?txtsize=20&b
 
 // scss-lint:disable QualifyingElement
 select.c-form__field {
-  text-indent: $base-spacing-unit;
   height: $base-spacing-unit * 2;
 
   &,
