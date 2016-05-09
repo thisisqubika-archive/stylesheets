@@ -2,7 +2,8 @@
   "name": "mooveit-stylesheets",
   "version": "0.0.1",
   "authors": [
-    "Moove-it Team"
+    { "name": "Moove-it Team" },
+    { "name": "Guzmán Iglesias", "email": "guzman.iglesias@moove-it.com" },
   ],
   "description": "This is a project to centralize moove-it web styles with bower.",
   "main": "mooveit.scss",
@@ -44,5 +45,9 @@
     "inuit-pack": "^0.1.1"
   },
   "moduleType": [],
-  "homepage": "https://github.com/guzmaniglesias/mooveit-stylesheets"
+  "homepage": "http://www.moove-it.com/styleguides",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moove-it/stylesheets.git"
+  }
 }
