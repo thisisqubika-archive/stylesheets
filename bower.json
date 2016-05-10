@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "authors": [
     { "name": "Moove-it Team" },
-    { "name": "Guzmán Iglesias", "email": "guzman.iglesias@moove-it.com" },
+    { "name": "Guzmán Iglesias", "email": "guzman.iglesias@moove-it.com" }
   ],
   "description": "This is a project to centralize moove-it web styles with bower.",
   "main": "mooveit.scss",
