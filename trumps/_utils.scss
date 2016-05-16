@@ -110,6 +110,11 @@ $heights: 100 75 50;
     // scss-lint:disable ImportantRule
     height: 1% * $h !important;
   }
+  .u-min-height--#{$h} {
+
+    // scss-lint:disable ImportantRule
+    min-height: 1% * $h !important;
+  }
 }
 
 
