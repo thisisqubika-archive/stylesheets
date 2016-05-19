@@ -129,7 +129,7 @@ $heights: 100 75 50;
   .u-color--#{"" + nth(map-keys($palette), $i)} {
     color: nth(map-values($palette), $i) !important;
   }
-  .u-bg--#{"" + nth(map-keys($palette), $i)} {
+  .u-background--#{"" + nth(map-keys($palette), $i)} {
     background-color: nth(map-values($palette), $i) !important;
   }
   .u-fill--#{"" + nth(map-keys($palette), $i)} {
