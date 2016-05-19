@@ -125,46 +125,15 @@ $heights: 100 75 50;
 // Body and background colors
 // ==========================================================================
 
-$our-colors: (
-  white: white,
-  black: black,
-
-  orange:   $color-brand-primary,
-
-  grey:     $color-grey,
-
-  dark:     $color-grey-dark,
-  darker:   $color-grey-darker,
-
-  light:    $color-grey-light,
-  lighter:  $color-grey-lighter,
-
-  transparent: transparent,
-
-  layer:    rgba($color-grey-darker, 0.8)
-);
-
-@each $c, $color in $our-colors {
-
-  // Text colors
-  .u-color--#{$c},
-  .u-color--#{$c}-hover:hover {
-    color: $color;
+@for $i from 1 through length($palette) {
+  .u-color--#{"" + nth(map-keys($palette), $i)} {
+    color: nth(map-values($palette), $i) !important;
   }
-
-  // Background colors
-  .u-background--#{$c},
-  .u-background--#{$c}-hover:hover {
-    transition: $base-transition;
-    background-color: $color;
+  .u-bg--#{"" + nth(map-keys($palette), $i)} {
+    background-color: nth(map-values($palette), $i) !important;
   }
-
-  // Fill (svg)
-  .u-fill--#{$c} {
-    &,
-    * {
-      fill: $color;
-    }
+  .u-fill--#{"" + nth(map-keys($palette), $i)} {
+    fill: nth(map-values($palette), $i) !important;
   }
 }
 
