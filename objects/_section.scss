@@ -20,9 +20,10 @@
     top: $base-spacing-unit;
     bottom: $base-spacing-unit;
   }
-  font-size: $base-font-size;
   text-align: center;
   text-transform: uppercase;
+  line-height: 1;
   color: $color-grey;
+  font-size: $base-font-size;
   font-weight: bold;
 }
