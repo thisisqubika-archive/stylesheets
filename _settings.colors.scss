@@ -37,14 +37,14 @@ $success-color:                         #56d478;
 $error-color:                           #d45659;
 
 $palette: (
-  white:       $white,
-  black:       $black,
-  orange:      $color-brand-primary,
-  grey:        $color-grey,
-  dark:        $color-grey-dark,
-  darker:      $color-grey-darker,
-  light:       $color-grey-light,
-  lighter:     $color-grey-lighter,
-  transparent: transparent,
-  layer:       rgba($color-grey-darker, 0.8)
+  'white':       $white,
+  'black':       $black,
+  'orange':      $color-brand-primary,
+  'grey':        $color-grey,
+  'dark':        $color-grey-dark,
+  'darker':      $color-grey-darker,
+  'light':       $color-grey-light,
+  'lighter':     $color-grey-lighter,
+  'transparent': transparent,
+  'layer':       rgba($color-grey-darker, 0.8)
 );

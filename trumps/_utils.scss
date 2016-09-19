@@ -207,10 +207,14 @@ $line-heights: 100 125 150 200 300;
 // Positions
 // ==========================================================================
 $positions: top bottom left right;
-$position-values: 0 20 40;
+$position-values: 20 40;
 
 @each $p in $positions {
   .u-#{$p} {
+    &--0 {
+      #{$p}: 0;
+    }
+
     @each $pv in $position-values {
       &--#{$pv} {
         #{$p}: 1px * $pv;
