@@ -53,6 +53,10 @@ $inuit-enable-pack--middle:   true;
 $inuit-enable-pack--tiny:     true;
 $inuit-pack-gutter--tiny:     $base-spacing-unit;
 
+// https://github.com/inuitcss/objects.flag
+$inuit-flag-namespace:        "o-";
+$inuit-enable-flag--responsive: true;
+
 // https://github.com/inuitcss/trumps.widths
 $inuit-use-fractions:         false;
 
