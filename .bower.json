@@ -24,6 +24,7 @@
     "gulpfile.json"
   ],
   "dependencies": {
+    "inuit-defaults": "latest",
     "inuit-reset": "latest",
     "inuit-shared": "latest",
     "inuit-page": "latest",
@@ -40,7 +41,7 @@
     "inuit-list-inline": "latest",
     "inuit-list-ui": "latest",
     "inuit-widths-responsive": "latest",
-    "inuit-pack": "latest"
+    "inuit-pack": "latest",
     "inuit-flag": "latest"
   },
   "moduleType": [],
