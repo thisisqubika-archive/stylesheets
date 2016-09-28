@@ -32,6 +32,10 @@
   background-position: left center;
 }
 
+[data-image*="left-bottom"] {
+  background-position: left bottom;
+}
+
 [data-image*="right-top"] {
   background-position: right top;
 }

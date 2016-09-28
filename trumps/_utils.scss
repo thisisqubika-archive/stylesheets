@@ -10,7 +10,7 @@
 $utilities: (
   "float":                    responsive_true      left right none,
   "clear":                    responsive_false     left right both,
-  "text-align":               responsive_false     center left right,
+  "text-align":               responsive_true      center left right,
   "text-decoration":          responsive_false     line-through none,
   "font-weight":              responsive_false     300 800 400,
   "list-style":               responsive_false     none,
@@ -18,7 +18,7 @@ $utilities: (
   "margin-right":             responsive_false     auto,
   "position":                 responsive_false     absolute relative fixed,
   "overflow":                 responsive_false     hidden,
-  "display":                  responsive_false     block inline-block inline none table table-cell responsive,
+  "display":                  responsive_false     block inline-block inline none table table-cell,
   "border-radius":            responsive_false     0
 );
 
