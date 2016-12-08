@@ -1,114 +1,51 @@
-// ==========================================================================
-// Settings
-// ==========================================================================
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
 
-//
-// These variables are inuitcss’ defaults; they should not be modified or
-// adjusted directly; you should predefine the variables in your own project.
-// Some are inherit alias.
-//
+// Standardise some UI treatments.
+$global-radius: 3px;
+$global-transition: (1 / 3) + s;
+$base-transition:   $global-transition;
 
 // Namespace.
 //
 // Would you like inuitcss’ classes to be prepended with a namespace? If so,
 // define it here.
-$inuit-namespace:             null !default;
+$inuit-namespace:             null;
 
-//
 // Fonts size & Line heights
-// ==========================================================================
+$inuit-global-font-size:      18px;
+$inuit-global-line-height:      30px;
 
-$base-font-size:              18px;
-$inuit-base-font-size:        $base-font-size;
-
-$base-line-height:            30px;
-$inuit-line-height:           $base-line-height;
-$inuit-base-line-height:      $base-line-height;
-
-//
 // Global variables
-// ==========================================================================
+$inuit-global-spacing-unit:   20px;
+$base-spacing-unit:           $inuit-global-spacing-unit;
+$gap:                         $inuit-global-spacing-unit;
 
-$base-spacing-unit:           20px;
-
-$inuit-base-spacing-unit:     $base-spacing-unit;
-
-$base-transition:             (1 / 3) * 1s;
-
-
-//
-// Inuit variables settings
-// ==========================================================================
-
-// https://github.com/inuitcss/settings.responsive
-$inuit-responsive-settings:   true;
-
-// https://github.com/inuitcss/objects.layout
-$inuit-layout-namespace:      "o-";
-$inuit-enable-layout--flush:   true;
-
-// https://github.com/inuitcss/objects.pack
-$inuit-pack-namespace:        "o-";
-$inuit-enable-pack--middle:   true;
-$inuit-enable-pack--tiny:     true;
-$inuit-pack-gutter--tiny:     $base-spacing-unit;
-
-// https://github.com/inuitcss/objects.flag
-$inuit-flag-namespace:        "o-";
-$inuit-enable-flag--responsive: true;
-
-// https://github.com/inuitcss/trumps.widths
-$inuit-use-fractions:         false;
-
-// https://github.com/inuitcss/settings.responsive/blob/master/_settings.responsive.scss
-$breakpoints: (
-    "start"          "screen and (min-width: 450px)",
-    "small"          "screen and (min-width: 873px)",
-    "large"          "screen and (min-width: 1200px)",
+// MQ
+$mq-base-font-size: $inuit-global-font-size;
+$mq-responsive: true;
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  450px,
+    desktop: 873px,
+    wide:    1200px
 );
+$mq-static-breakpoint: desktop;
+$mq-show-breakpoints: ();
+$mq-media-type: all;
 
-//https://github.com/inuitcss/base.headings/blob/master/_base.headings.scss
-$inuit-heading-size-6:  18px;
-$inuit-heading-size-5:  $inuit-heading-size-6 * 1.2555;
-$inuit-heading-size-4:  $inuit-heading-size-5 * 1.2555;
-$inuit-heading-size-3:  $inuit-heading-size-4 * 1.2555;
-$inuit-heading-size-2:  $inuit-heading-size-3 * 1.2555;
-$inuit-heading-size-1:  $inuit-heading-size-2 * 1.2555;
+// Widths
+$inuit-fractions: (1, 2, 3, 4, 5, 6, 7, 8, 12);
+$inuit-widths-delimiter: "-of-";
+$inuit-widths-breakpoint-separator: \@;
 
-// https://github.com/inuitcss/trumps.widths/blob/master/_trumps.widths.scss
-$inuit-widths-columns: (1, 2, 3, 4, 5, 6, 7, 8, 12);
-
-// https://github.com/inuitcss/trumps.widths-responsive/blob/master/_trumps.widths-responsive.scss
-$inuit-widths-columns-responsive: $inuit-widths-columns;
-
-//https://github.com/inuitcss/trumps.spacing
-$inuit-enable-margins:                    true;
-$inuit-enable-margins--tiny:              true;
-$inuit-enable-margins--small:             true;
-$inuit-enable-margins--large:             true;
-$inuit-enable-margins--huge:              true;
-$inuit-enable-margins--none:              true;
-$inuit-enable-margins--negative:          true;
-$inuit-enable-margins--negative-tiny:     true;
-$inuit-enable-margins--negative-small:    true;
-$inuit-enable-margins--negative-large:    true;
-$inuit-enable-margins--negative-huge:     true;
-$inuit-enable-paddings:                   true;
-$inuit-enable-paddings--tiny:             true;
-$inuit-enable-paddings--small:            true;
-$inuit-enable-paddings--large:            true;
-$inuit-enable-paddings--huge:             true;
-
-//https://github.com/inuitcss/trumps.spacing-responsive
-$inuit-enable-responsive-margins:         true;
-$inuit-enable-responsive-margins--tiny:   true;
-$inuit-enable-responsive-margins--small:  true;
-$inuit-enable-responsive-margins--large:  true;
-$inuit-enable-responsive-margins--huge:   true;
-$inuit-enable-responsive-margins--none:   true;
-$inuit-enable-responsive-paddings:        true;
-$inuit-enable-responsive-paddings--tiny:  true;
-$inuit-enable-responsive-paddings--small: true;
-$inuit-enable-responsive-paddings--large: true;
-$inuit-enable-responsive-paddings--huge:  true;
-$inuit-enable-responsive-paddings--none:  true;
+// Headings
+$inuit-font-size-h6:  18px;
+$inuit-font-size-h5:  $inuit-font-size-h6 * 1.2555;
+$inuit-font-size-h4:  $inuit-font-size-h5 * 1.2555;
+$inuit-font-size-h3:  $inuit-font-size-h4 * 1.2555;
+$inuit-font-size-h2:  $inuit-font-size-h3 * 1.2555;
+$inuit-font-size-h1:  $inuit-font-size-h2 * 1.2555;

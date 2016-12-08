@@ -3,7 +3,7 @@
 // ==========================================================================
 
 .o-layout {
-  @extend %clearfix;
+  @include inuit-clearfix;
 }
 
 .o-layout__item {
