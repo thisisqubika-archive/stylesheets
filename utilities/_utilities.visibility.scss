@@ -44,10 +44,10 @@ $displays: inherit block inline-block table-cell !default;
   display: none;
 }
 
-@each $breakpoint in $breakpoints {
+@each $breakpoint in $mq-breakpoints {
   $alias: nth($breakpoint, 1);
 
-  @include media-query($alias) {
+  @include mq($alias) {
     .display-#{$alias}-up {
       display: inherit;
     }
@@ -55,24 +55,24 @@ $displays: inherit block inline-block table-cell !default;
 }
 
 @each $d in $displays {
-  @each $breakpoint in $breakpoints {
+  @each $breakpoint in $mq-breakpoints {
     $alias: nth($breakpoint, 1);
 
     .display-#{$d}-#{$alias}-up {
       @extend %display-none;
 
-      @include media-query($alias) {
+      @include mq($alias) {
         display: $d;
       }
     }
   }
 }
 
-@each $breakpoint in $breakpoints {
+@each $breakpoint in $mq-breakpoints {
   $alias: nth($breakpoint, 1);
 
   .hide-#{$alias}-up {
-    @include media-query($alias) {
+    @include mq($alias) {
       display: none;
     }
   }

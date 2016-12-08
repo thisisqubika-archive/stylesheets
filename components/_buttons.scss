@@ -86,7 +86,7 @@
 
 .c-btn__icon {
   display: inline-block;
-  line-height: $base-font-size;
+  line-height: initial;
   font-size: 19px;
 
   .c-btn--special:hover & {

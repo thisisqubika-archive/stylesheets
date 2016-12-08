@@ -19,7 +19,7 @@
   padding: $base-spacing-unit;
   vertical-align: middle;
 
-  @include media-query(large) {
+  @include mq(wide) {
     padding-right: $base-spacing-unit;
     padding-left: $base-spacing-unit;
   }
@@ -67,16 +67,16 @@ $proportions-list: (
 
 @include box-ratio;
 
-@include media-query(start) {
-  @include box-ratio(-start);
+@include mq(tablet) {
+  @include box-ratio(-tablet);
 }
 
-@include media-query(small) {
-  @include box-ratio(-small);
+@include mq(desktop) {
+  @include box-ratio(-desktop);
 }
 
-@include media-query(large) {
-  @include box-ratio(-large);
+@include mq(wide) {
+  @include box-ratio(-wide);
 }
 
 

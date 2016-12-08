@@ -26,25 +26,8 @@
     "gulpfile.json"
   ],
   "dependencies": {
-    "inuit-defaults": "latest",
-    "inuit-reset": "latest",
-    "inuit-shared": "latest",
-    "inuit-page": "latest",
-    "inuit-lists": "latest",
-    "inuit-images": "latest",
-    "inuit-paragraphs": "latest",
-    "inuit-layout": "latest",
-    "inuit-starter-kit": "latest",
-    "inuit-spacing-responsive": "latest",
-    "inuit-tools-widths": "latest",
-    "inuit-clearfix": "latest",
-    "inuit-headings-trumps": "latest",
-    "inuit-buttons": "latest",
-    "inuit-list-inline": "latest",
-    "inuit-list-ui": "latest",
-    "inuit-widths-responsive": "latest",
-    "inuit-pack": "latest",
-    "inuit-flag": "latest"
+    "sass-mq": "latest",
+    "inuitcss": "latest"
   },
   "moduleType": [],
   "homepage": "http://www.moove-it.com/styleguides",

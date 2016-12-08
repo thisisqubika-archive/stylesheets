@@ -9,7 +9,7 @@
 //
 
 .o-section {
-  @extend %clearfix;
+  @include inuit-clearfix;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -17,13 +17,13 @@
 
 .o-section__title {
   padding: {
-    top: $base-spacing-unit;
-    bottom: $base-spacing-unit;
+    top: $gap;
+    bottom: $gap;
   }
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
-  color: $color-grey;
-  font-size: $base-font-size;
+  color: palette("grey");
+  font-size: initial;
   font-weight: bold;
 }

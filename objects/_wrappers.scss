@@ -21,11 +21,11 @@ $wraper-width-small:   1100px  !default;
   padding-left: $base-spacing-unit;
   max-width: $wraper-width-default;
 
-  @include media-query(start) {
+  @include mq(tablet) {
     max-width: $wraper-width-start;
   }
 
-  @include media-query(small) {
+  @include mq(desktop) {
     max-width: $wraper-width-small;
   }
 }
