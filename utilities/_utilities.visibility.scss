@@ -71,7 +71,7 @@ $displays: inherit block inline-block table-cell !default;
 @each $breakpoint in $mq-breakpoints {
   $alias: nth($breakpoint, 1);
 
-  .hideat-at-#{$alias} {
+  .hide-at-#{$alias} {
     @include mq($alias) {
       display: none;
     }
