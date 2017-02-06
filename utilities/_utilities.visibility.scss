@@ -9,26 +9,26 @@
 // With the default $displays variables set values,
 // these classes will be avaliable :
 //
-// .display-inherit-start-up
-// .display-inherit-small-up
-// .display-inherit-large-up
-// .display-block-start-up
-// .display-block-small-up
-// .display-block-large-up
-// .display-inline-block-start-up
-// .display-inline-block-small-up
-// .display-inline-block-large-up
-// .display-table-cell-start-up
-// .display-table-cell-small-up
-// .display-table-cell-large-up
+// .display-inherit-at-desktop
+// .display-inherit-at-desktop
+// .display-inherit-at-wide
+// .display-block-at-desktop
+// .display-block-at-desktop
+// .display-block-at-wide
+// .display-inline-block-at-desktop
+// .display-inline-block-at-desktop
+// .display-inline-block-at-wide
+// .display-table-cell-at-desktop
+// .display-table-cell-at-desktop
+// .display-table-cell-at-wide
 //
 //
 // Besides, this classes will hide the elements whet the
 // breakpoint is reached:
 //
-// .hide-start-up
-// .hide-small-up
-// .hide-large-up
+// .hide-at-desktop
+// .hide-at-desktop
+// .hide-at-wide
 //
 
 
@@ -39,7 +39,7 @@ $displays: inherit block inline-block table-cell !default;
 
 
 // A selector for extend hidden (display:none) states of all
-// classes sarting with format ".display-< value >-< breaqpoint >-up".
+// classes sarting with format ".display-< value >-< breaqpoint >".
 %display-none {
   display: none;
 }
@@ -48,7 +48,7 @@ $displays: inherit block inline-block table-cell !default;
   $alias: nth($breakpoint, 1);
 
   @include mq($alias) {
-    .display-#{$alias}-up {
+    .display-at-#{$alias} {
       display: inherit;
     }
   }
@@ -58,7 +58,7 @@ $displays: inherit block inline-block table-cell !default;
   @each $breakpoint in $mq-breakpoints {
     $alias: nth($breakpoint, 1);
 
-    .display-#{$d}-#{$alias}-up {
+    .display-at-#{$d}-#{$alias} {
       @extend %display-none;
 
       @include mq($alias) {
@@ -71,7 +71,7 @@ $displays: inherit block inline-block table-cell !default;
 @each $breakpoint in $mq-breakpoints {
   $alias: nth($breakpoint, 1);
 
-  .hide-#{$alias}-up {
+  .hideat-at-#{$alias} {
     @include mq($alias) {
       display: none;
     }

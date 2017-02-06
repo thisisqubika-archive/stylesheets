@@ -68,15 +68,15 @@ $proportions-list: (
 @include box-ratio;
 
 @include mq(tablet) {
-  @include box-ratio(-tablet);
+  @include box-ratio(-at-tablet);
 }
 
 @include mq(desktop) {
-  @include box-ratio(-desktop);
+  @include box-ratio(-at-desktop);
 }
 
 @include mq(wide) {
-  @include box-ratio(-wide);
+  @include box-ratio(-at-wide);
 }
 
 
