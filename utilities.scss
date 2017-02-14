@@ -12,7 +12,7 @@ $inuit-offsets: true;
 @import "inuitcss/utilities/utilities.hide";
 
 // Moove-it utilities
-
+@import "utilities/utilities.clearfix";
 @import "utilities/utilities.overrides";
 @import "utilities/utilities.backgrounds";
 @import "utilities/utilities.borders";
