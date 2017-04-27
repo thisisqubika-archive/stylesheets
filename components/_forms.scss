@@ -36,7 +36,7 @@ $form-field-focus-state-image: "https://placeholdit.imgix.net/~text?txtsize=20&b
     transform: translateY(-50%);
     z-index: 1;
     line-height: $base-spacing-unit;
-    color: $color-brand-primary;
+    color: palette("orange");
     font-size: 30px;
     content: "*";
   }
@@ -59,17 +59,17 @@ $form-field-focus-state-image: "https://placeholdit.imgix.net/~text?txtsize=20&b
 
   .c-form--dark & {
     border-color: $color-grey;
-    background-color: mix($color-grey-dark, $color-grey-darker, 50%);
+    background-color: mix(palette("dark"), palette("darker"), 50%);
   }
 
   &:focus {
-    border-color: $color-brand-primary;
+    border-color: palette("orange");
     background-position: -14px 5px;
   }
 
   &--error {
-    border: 1px solid $error-color;
-    color: $error-color;
+    border: 1px solid palette("color-error");
+    color: palette("color-error");
   }
 
 }
