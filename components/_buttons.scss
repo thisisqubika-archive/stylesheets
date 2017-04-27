@@ -25,23 +25,23 @@
 .c-btn--primary {
   transition: $base-transition;
   border-radius: 999px;
-  background-color: $color-btn-background;
-  color: $color-btn;
+  background-color: palette("orange");
+  color: palette("white");
 
   @include hocus() {
-    background-color: $color-btn-background-hover;
+    background-color: lighten(palette("orange"), 5%);
   }
 }
 
 .c-btn--secondary {
   transition: $base-transition;
-  border: $color-btn-secondary 1px solid;
+  border: palette("white") 1px solid;
   border-radius: 999px;
-  background-color: $color-btn-secondary-background;
-  color: $color-btn-secondary;
+  background-color: transparent;
+  color: palette("white");
 
   @include hocus() {
-    background-color: $color-btn-secondary-background-hover;
+    background-color: rgba(palette("grey"), 0.5);
   }
 }
 
