@@ -2,7 +2,7 @@
   "name": "mooveit-stylesheets",
   "version": "1.0.0",
   "description": "This is a project to centralize moove-it web styles.",
-  "main": "index.js",
+  "main": "example.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
