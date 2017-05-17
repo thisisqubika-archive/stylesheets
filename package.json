@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/moove-it/stylesheets.git"
   },
-  "author": "",
+  "author": "Guzman Iglesias <guzman.iglesias@moove-it.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/moove-it/stylesheets/issues"
