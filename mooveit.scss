@@ -86,7 +86,6 @@
 
 
 // TOOLS
-@import "inuitcss/tools/tools.rem";
 @import "inuitcss/tools/tools.font-size";
 @import "inuitcss/tools/tools.clearfix";
 @import "inuitcss/tools/tools.hidden";
@@ -134,7 +133,7 @@
 @import "inuitcss/objects/objects.block";
 @import "inuitcss/objects/objects.ratio";
 @import "inuitcss/objects/objects.crop";
-@import "inuitcss/objects/objects.tables";
+@import "inuitcss/objects/objects.table";
 @import "inuitcss/objects/objects.pack";
 
 
@@ -145,7 +144,6 @@
 // Moove-it Objects
 // ==========================================================================
 
-@import "objects/wrappers";
 @import "objects/section";
 @import "objects/box";
 
